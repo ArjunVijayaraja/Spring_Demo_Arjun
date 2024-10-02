@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:property-placeholder location="sports.properties"></context:property-placeholder>
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<!--    OLD METHOD-->
+<!--    <bean id="myWish" class="com.Demo.HappyWishService"></bean>-->
+
+<!--    <bean id="myCricketCoach" class="com.Demo.CricketCoach">-->
+<!--&lt;!&ndash;       TO create an object by passing a constructor argument &ndash;&gt;-->
+<!--&lt;!&ndash;        Constructor Injection&ndash;&gt;-->
+<!--        <constructor-arg ref="myWish" ></constructor-arg>-->
+<!--    </bean>-->
+<!--&lt;!&ndash;    Normally all the Objectts that is been created by Spring is SINGLETON&ndash;&gt;-->
+<!--&lt;!&ndash;    So when each andd every time when the bean is called to create an object&#45;&#45; No new object will be created it will utilize the existing obj&ndash;&gt;-->
+<!--&lt;!&ndash;        By changing the scope of the BEAN to prototype we will be able to create multiple new items&ndash;&gt;-->
+<!--&lt;!&ndash;    <bean id="myFootBallCoach" class="com.Demo.FootBallCoach" scope="prototype">&ndash;&gt;-->
+<!--    <bean id="myFootBallCoach" class="com.Demo.FootBallCoach" init-method="startUpMethod" destroy-method="destroyMethod">-->
+<!--        <property name="wishSerivice" ref="myWish"></property>-->
+<!--&lt;!&ndash;        <property name="emailAddress" value="test@gmail.com"></property>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="team" value="INDIA"></property>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        By using properties file we can access the values&ndash;&gt;-->
+<!--                <property name="emailAddress" value="${email}"></property>-->
+<!--                <property name="team" value="${team}"></property>-->
+<!--    </bean>-->
+
+    <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    
+    <context:component-scan base-package="com.Demo"></context:component-scan>
+</beans>
